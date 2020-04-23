@@ -1,3 +1,4 @@
+use crate::borrow_string::borrow_string;
 use rand::{thread_rng, Rng};
 use std::io::{stdin};
 use std::cmp::Ordering;
@@ -20,6 +21,8 @@ pub fn guess_number(){
             Ordering::Greater => println!("Big"),
             Ordering::Equal => {
                 println!("Hurray its equal");
+                let the_end = String::from("THE END");
+                borrow_string(&the_end);
                 break;
             }
         }
