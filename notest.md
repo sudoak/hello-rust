@@ -17,6 +17,15 @@
 * drop() -> this drops off vars out of scope
 * double free error (corrupts memory and security vulneribilities)
 * move -> moves pointer from one to another -> deep copies
-* str1.clone(), str1.len()
+* str1.clone(), str1.len(), str1.clear()
 * copy happens for scalar types (cos they live in stack)
+* we can only have one reference to mutable data apart from owner (&mut) (race condition is avoided)
+* one mutatble reference or many immutable refs
+* dangle (need lifetime parameter in main)
+* .iter.enumerate()
+* slices
+* struct -> fields
+* .. used as spread operator - if already not mentioned
+* tuple struct
+* String (can grow) vs str (can not and is immutable)
 * 
