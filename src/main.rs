@@ -1,12 +1,12 @@
 use ferris_says::say;
-use std::io::{stdout, BufWriter};
+use std::io::{stdout, BufWriter, stdin};
 
 mod rectangle;
 mod borrow_string;
 
 mod guess_number;
-// use guess_number::guess_number;
-// use rectangle::area;
+use guess_number::guess_number;
+use rectangle::area;
 
 #[derive(Debug)]
 pub struct Rectangle {
@@ -33,14 +33,18 @@ fn main() {
     let mut writer = BufWriter::new(stdout.lock());
     say(out, width, &mut writer).unwrap();
     
-    // guess_number();
+    println!("Please enter a choice");
 
-    // Calculate area of rectangle
-    let first_rectangle = Rectangle { width: 10, height: 10};
-    let second_rectangle = Rectangle { width: 1, height: 5};
-    let first_square = Rectangle::square(32);
-    println!("The traiangle has {:?}", first_rectangle);
-    println!("The area of first rectangle is: {}", first_rectangle.area());
-    println!("can first rectanlge hold second one {}", first_rectangle.can_hold(&second_rectangle));
-    println!("The square is {:0?} and its area is {1}", first_square, first_square.area());
+    let mut input_option = String::new();
+    stdin().read_line(&mut input_option)
+            .expect("Failed to read number");
+    let input_option: u32 = match input_option.trim().parse() {
+        Ok(num) => num,
+        Err(_) => panic!("Invalid input option"),
+    };
+    match input_option {
+        1 => guess_number(),
+        2 => area(),
+        _ => println!("You entered wrong input")
+    }
 }

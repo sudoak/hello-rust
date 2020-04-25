@@ -32,4 +32,11 @@
 * Debug is a triat and derive is an annotation
 * {:?} vs {:#?}
 * Associate fucntions - which dont take self as parameter - used to return new instance of struct
+* struct can have many impementations
+* in enum any type of kind of data can be put
+* Rust does not have null value - but has Option<T> with Some(T) and None
+* <T> it means it holds some type of data 
+* Some holds all the values
+* But in None u nedd to specify which data type u refering too
+* Option<T> { Some(T), None}
 * 
