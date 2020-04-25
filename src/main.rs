@@ -1,19 +1,41 @@
 use ferris_says::say;
 use std::io::{stdout, BufWriter, stdin};
 
+// modules
 mod rectangle;
 mod borrow_string;
-
 mod guess_number;
+mod enum_coin;
+mod some_example;
+
+// use imports 
 use guess_number::guess_number;
 use rectangle::area;
+use enum_coin::value_in_cents;
+use some_example::add_one;
 
+// structs & enums
 #[derive(Debug)]
 pub struct Rectangle {
     width: u32,
     height: u32,
 }
 
+#[derive(Debug)]
+pub enum UStates {
+    Alaska,
+    Alabama
+}
+
+pub enum Coin {
+    Penny,
+    Nickel, 
+    Dime, 
+    Quarter,
+    States(UStates)
+}
+
+// implementations of struct and enums
 impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
@@ -25,6 +47,8 @@ impl Rectangle {
         Rectangle { width : side, height: side}
     }
 }
+
+// Main 
 fn main() {
     let stdout = stdout();
     let out = b"Program runs Rustaceans!";
@@ -45,6 +69,16 @@ fn main() {
     match input_option {
         1 => guess_number(),
         2 => area(),
+        3 => {
+            let first_coin = Coin::Penny;
+            let state_be = Coin::States(UStates::Alabama);
+            println!("value be {}",value_in_cents(&first_coin));
+            println!("state be {}",value_in_cents(&state_be));
+        },
+        4 => {
+            let sample_input = Some(1);
+            println!("Solution is {:?}", add_one(&sample_input))
+        }
         _ => println!("You entered wrong input")
     }
 }

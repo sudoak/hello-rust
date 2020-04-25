@@ -39,4 +39,5 @@
 * Some holds all the values
 * But in None u nedd to specify which data type u refering too
 * Option<T> { Some(T), None}
+* enum can contain struct as well as enum
 * 
