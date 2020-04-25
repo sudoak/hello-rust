@@ -18,6 +18,9 @@ impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
     }
+    fn can_hold(&self, other_rectangle: &Rectangle) -> bool {
+        self.width > other_rectangle.width && self.height > other_rectangle.height
+    }
 }
 fn main() {
     let stdout = stdout();
@@ -31,6 +34,8 @@ fn main() {
 
     // Calculate area of rectangle
     let first_rectangle = Rectangle { width: 10, height: 10};
+    let second_rectangle = Rectangle { width: 1, height: 5};
     println!("The traiangle has {:#?}", first_rectangle);
-    println!("The area of rectangle is: {}", first_rectangle.area());
+    println!("The area of first rectangle is: {}", first_rectangle.area());
+    println!("can first rectanlge hold second one {}", first_rectangle.can_hold(&second_rectangle))
 }
