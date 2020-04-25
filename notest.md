@@ -28,4 +28,7 @@
 * .. used as spread operator - if already not mentioned
 * tuple struct
 * String (can grow) vs str (can not and is immutable)
+* primitive methods implement Display, Debug by default but not struct
+* Debug is a triat and derive is an annotation
+* {:?} vs {:#?}
 * 
