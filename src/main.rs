@@ -7,13 +7,13 @@ mod borrow_string;
 mod guess_number;
 mod enum_coin;
 mod some_example;
-
+mod module_exmple;
 // use imports 
 use guess_number::guess_number;
 use rectangle::area;
 use enum_coin::value_in_cents;
 use some_example::add_one;
-
+use module_exmple::eating_at_cafe;
 // structs & enums
 #[derive(Debug)]
 pub struct Rectangle {
@@ -78,7 +78,8 @@ fn main() {
         4 => {
             let sample_input = Some(1);
             println!("Solution is {:?}", add_one(&sample_input))
-        }
+        },
+        5 => eating_at_cafe(),
         _ => println!("You entered wrong input")
     }
 }

@@ -40,4 +40,21 @@
 * But in None u nedd to specify which data type u refering too
 * Option<T> { Some(T), None}
 * enum can contain struct as well as enum
+* combining match and enums is useful
+* _ is placeholder and used for exhautive coverage
+* if let syntax
+* if let Some(3) = some_u8_value { println!("lol")} else { println!("ha ha")}
+* can control which is in scope and which is not
+* Packages, crates, modules, paths
+* A project can have multiple crates but one library
+* Absolute path vs relative path
+* we can aslo construct relative path of parent module using super super::serve_order()
+* if struct has made public, the each invidual fields and impl should be made public
+* if enum is made public all of its variants are made public
+* we can use  ****use**** to make mods come in scope
+* self can cause inconsistecy so dont use in future
+* ****as**** can be used for a proper idiomatic way to name a scope
+* ****pub**** ****use**** can reimport mods and make it pub for others too
+* std is also external but ships with rust. still we need to explicitly mention it
+* we can import nested path use std::io::{self, Write}
 * 
