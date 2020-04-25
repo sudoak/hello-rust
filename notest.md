@@ -31,4 +31,5 @@
 * primitive methods implement Display, Debug by default but not struct
 * Debug is a triat and derive is an annotation
 * {:?} vs {:#?}
+* Associate fucntions - which dont take self as parameter - used to return new instance of struct
 * 
