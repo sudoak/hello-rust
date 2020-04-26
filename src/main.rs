@@ -10,6 +10,7 @@ mod some_example;
 mod module_exmple;
 mod collection_example;
 mod error_example;
+mod guess_number_struct;
 
 // use imports 
 use guess_number::guess_number;
@@ -19,6 +20,7 @@ use some_example::add_one;
 use module_exmple::eating_at_cafe;
 use collection_example::{ get_hash_map_color, has_map_from_vec, count_words_in_a_sentence };
 use error_example::read_file_here;
+use guess_number_struct::{ Guess};
 
 // structs & enums
 #[derive(Debug)]
@@ -90,6 +92,10 @@ fn main() {
         7 => has_map_from_vec(),
         8 => count_words_in_a_sentence(),
         9 => read_file_here(),
+        10 => {
+            let guess_one = Guess::new(10);
+            println!("{:?}", guess_one.value());
+        }
         _ => println!("You entered wrong input")
     }
 }
