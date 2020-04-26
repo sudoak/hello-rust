@@ -80,4 +80,7 @@
 * ? operator, propogates error (can only be used in fn which returns result)
 * *******fs::read_to_string("hello.txt")*******
 * if wanna use ****?**** operator in main.rs use Result<(), Box<dyn Error>> //it means any error
+* generics are abstract standins for concrete types (Vec<T>, Option etc)
+* A trait tells the Rust compiler about functionality a particular type has and can share with other types
+* we cant implement external traits of external types
 * 

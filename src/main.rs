@@ -11,6 +11,8 @@ mod module_exmple;
 mod collection_example;
 mod error_example;
 mod guess_number_struct;
+mod greatest_of_all;
+mod trait_sample;
 
 // use imports 
 use guess_number::guess_number;
@@ -21,6 +23,8 @@ use module_exmple::eating_at_cafe;
 use collection_example::{ get_hash_map_color, has_map_from_vec, count_words_in_a_sentence };
 use error_example::read_file_here;
 use guess_number_struct::{ Guess};
+// use greatest_of_all::largest;
+use trait_sample::run;
 
 // structs & enums
 #[derive(Debug)]
@@ -95,7 +99,13 @@ fn main() {
         10 => {
             let guess_one = Guess::new(10);
             println!("{:?}", guess_one.value());
-        }
+        },
+        11 => {
+            let number_list = vec![34, 50, 25, 100, 65];
+            // let result = largest(&number_list);
+            // println!("The largest number is {}", result);
+        },
+        12 => run(),
         _ => println!("You entered wrong input")
     }
 }
