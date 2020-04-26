@@ -8,12 +8,16 @@ mod guess_number;
 mod enum_coin;
 mod some_example;
 mod module_exmple;
+mod collection_example;
+
 // use imports 
 use guess_number::guess_number;
 use rectangle::area;
 use enum_coin::value_in_cents;
 use some_example::add_one;
 use module_exmple::eating_at_cafe;
+use collection_example::{ get_hash_map_color, has_map_from_vec };
+
 // structs & enums
 #[derive(Debug)]
 pub struct Rectangle {
@@ -80,6 +84,8 @@ fn main() {
             println!("Solution is {:?}", add_one(&sample_input))
         },
         5 => eating_at_cafe(),
+        6 => get_hash_map_color(),
+        7 => has_map_from_vec(),
         _ => println!("You entered wrong input")
     }
 }

@@ -57,4 +57,16 @@
 * ****pub**** ****use**** can reimport mods and make it pub for others too
 * std is also external but ships with rust. still we need to explicitly mention it
 * we can import nested path use std::io::{self, Write}
+* vectors can only store values of one type Vec<T> . for can be used to iterate through Vec values
+* vec.push(), vec.get(), vec.pop()
+* to_string() creates a String from string literal
+* push_str()
+* + can be sused for string concantenation s1 + &s2
+* format!("{}-{}-{}", s1, s2, s3) (it does not take ownership as above)
+* Rust strings do not support indexing
+* grapheme clusters
+* for i in string.chars() {} || string.bytes()
+* if we create hashmap from existing vars, it will take away their ownership
+* hashmap.insert() will insert also override
+* hashmape.entry().or_insert() //checks if exists, if not then updates
 * 
