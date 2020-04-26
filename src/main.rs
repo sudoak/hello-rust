@@ -16,7 +16,7 @@ use rectangle::area;
 use enum_coin::value_in_cents;
 use some_example::add_one;
 use module_exmple::eating_at_cafe;
-use collection_example::{ get_hash_map_color, has_map_from_vec };
+use collection_example::{ get_hash_map_color, has_map_from_vec, count_words_in_a_sentence };
 
 // structs & enums
 #[derive(Debug)]
@@ -86,6 +86,7 @@ fn main() {
         5 => eating_at_cafe(),
         6 => get_hash_map_color(),
         7 => has_map_from_vec(),
+        8 => count_words_in_a_sentence(),
         _ => println!("You entered wrong input")
     }
 }

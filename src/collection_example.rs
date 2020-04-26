@@ -16,3 +16,13 @@ pub fn has_map_from_vec() {
     let scores: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect();
     println!("{:?}",scores);
 }
+
+pub fn count_words_in_a_sentence() {
+    let text = "hello world wonderful world";
+    let mut map = HashMap::new();
+    for word in text.split_whitespace() {
+        let count = map.entry(word).or_insert(0);
+        *count += 1;
+    }
+    println!("{:?}", map);
+}
