@@ -69,4 +69,15 @@
 * if we create hashmap from existing vars, it will take away their ownership
 * hashmap.insert() will insert also override
 * hashmape.entry().or_insert() //checks if exists, if not then updates
+* Errors -> Recoverable vs Unrecoverable (Result<T, E>)
+* unrecoverable, use panic! macro it unwinds all
+* can use panic = 'abort' // without cleaning up, just exiting code
+* buffer overread (reading from index which is not present in an array)
+* RUST_BACTRACE=1 cargo run // to search a level up
+* can match over error.kin() 
+* unwrap_or_else(|error|{})
+* panic on error -> expect and unwrap 
+* ? operator, propogates error (can only be used in fn which returns result)
+* *******fs::read_to_string("hello.txt")*******
+* if wanna use ****?**** operator in main.rs use Result<(), Box<dyn Error>> //it means any error
 * 

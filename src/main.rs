@@ -9,6 +9,7 @@ mod enum_coin;
 mod some_example;
 mod module_exmple;
 mod collection_example;
+mod error_example;
 
 // use imports 
 use guess_number::guess_number;
@@ -17,6 +18,7 @@ use enum_coin::value_in_cents;
 use some_example::add_one;
 use module_exmple::eating_at_cafe;
 use collection_example::{ get_hash_map_color, has_map_from_vec, count_words_in_a_sentence };
+use error_example::read_file_here;
 
 // structs & enums
 #[derive(Debug)]
@@ -87,6 +89,7 @@ fn main() {
         6 => get_hash_map_color(),
         7 => has_map_from_vec(),
         8 => count_words_in_a_sentence(),
+        9 => read_file_here(),
         _ => println!("You entered wrong input")
     }
 }
