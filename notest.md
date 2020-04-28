@@ -17,7 +17,7 @@
 * drop() -> this drops off vars out of scope
 * double free error (corrupts memory and security vulneribilities)
 * move -> moves pointer from one to another -> deep copies
-* str1.clone(), str1.len(), str1.clear()
+* str1.clone(), str1.len(), str1.clear(), str1.as_str()
 * copy happens for scalar types (cos they live in stack)
 * we can only have one reference to mutable data apart from owner (&mut) (race condition is avoided)
 * one mutatble reference or many immutable refs
@@ -84,6 +84,16 @@
 * A trait tells the Rust compiler about functionality a particular type has and can share with other types
 * we cant implement external traits of external types
 * trait as parameters
-* trait bound syntax
+* trait bound syntax <T: Display + Copy>
 * returning types that implement traits
+* heap collections are slow if grew in large amount
+* rust moves selected errors from runtime to compile time to improve performence
+* preventing dangling references with lifetimes (Ultimately, lifetime syntax is about connecting the lifetimes of various parameters and return values of functions)
+* rust has borrow checkers to compare scopes
+* lifetime annotation syntax (explicit lifetime)
+  * &i32        // a reference
+  * &'a i32     // a reference with an explicit lifetime
+  * &'a mut i32 // a mutable reference with an explicit lifetime
+* lifetime elision rules (repeated addition of new rules)
+* static lifetime -> saves in program binary and always avalilable 
 * 
