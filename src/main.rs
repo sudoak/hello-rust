@@ -23,7 +23,7 @@ use module_exmple::eating_at_cafe;
 use collection_example::{ get_hash_map_color, has_map_from_vec, count_words_in_a_sentence };
 use error_example::read_file_here;
 use guess_number_struct::{ Guess};
-// use greatest_of_all::largest;
+use greatest_of_all::largest;
 use trait_sample::run;
 
 // structs & enums
@@ -102,8 +102,8 @@ fn main() {
         },
         11 => {
             let number_list = vec![34, 50, 25, 100, 65];
-            // let result = largest(&number_list);
-            // println!("The largest number is {}", result);
+            let result = largest(&number_list);
+            println!("The largest number is {}", result);
         },
         12 => run(),
         _ => println!("You entered wrong input")

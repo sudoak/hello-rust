@@ -1,13 +1,21 @@
-// use std::cmp::PartialOrd;
+use std::cmp::PartialEq;
 
-// pub fn largest<T>(list: &[T]) -> T {
-//     let mut largest = list[0];
-//     for &item in list.iter() {
-//         if item > largest {
-//             largest = item;
-//         }
-//     }
-//     largest
+pub fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
+    let mut largest = list[0];
+    for &item in list.iter() {
+        if item > largest {
+            largest = item;
+        }
+    }
+    largest
+}
+
+
+// fn some_function<T, U>(t: T, u: U) -> i32
+//     where T: Display + Clone,
+//     U: Clone + Debug
+// {
+
 // }
 
 

@@ -83,4 +83,7 @@
 * generics are abstract standins for concrete types (Vec<T>, Option etc)
 * A trait tells the Rust compiler about functionality a particular type has and can share with other types
 * we cant implement external traits of external types
+* trait as parameters
+* trait bound syntax
+* returning types that implement traits
 * 
