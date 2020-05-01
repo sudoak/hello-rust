@@ -96,4 +96,14 @@
   * &'a mut i32 // a mutable reference with an explicit lifetime
 * lifetime elision rules (repeated addition of new rules)
 * static lifetime -> saves in program binary and always avalilable 
+* cargo has two profiles dev and release
+* opt-level to control compile time
+* cargo doc to generate html, md based documentation in target/doc
+* create a public API fro your crate by using reimports pub use self::something
+* cargo login token
+* cargo publish, 
+* cargo yank --vers 1.0.1 --undo
+* Box<T> it allows to store data in heap rather in stack Box::new(5)
+* in recursive type the memory cant be know at compile time
+* cons list (two arguments always)
 * 

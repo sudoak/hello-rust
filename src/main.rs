@@ -13,6 +13,7 @@ mod error_example;
 mod guess_number_struct;
 mod greatest_of_all;
 mod trait_sample;
+mod cons_list_example;
 
 // use imports 
 use guess_number::guess_number;
@@ -25,6 +26,7 @@ use error_example::read_file_here;
 use guess_number_struct::{ Guess};
 use greatest_of_all::largest;
 use trait_sample::run;
+use cons_list_example::print_list;
 
 // structs & enums
 #[derive(Debug)]
@@ -106,6 +108,9 @@ fn main() {
             println!("The largest number is {}", result);
         },
         12 => run(),
+        13 => {
+            print_list();
+        },
         _ => println!("You entered wrong input")
     }
 }
