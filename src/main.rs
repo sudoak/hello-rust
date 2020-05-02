@@ -1,5 +1,8 @@
 use ferris_says::say;
 use std::io::{stdout, BufWriter, stdin};
+use std::sync::mpsc;
+use std::thread;
+use std::sync::Mutex;
 
 // modules
 mod rectangle;
@@ -114,6 +117,23 @@ fn main() {
             print_list();
         },
         14 => thread_main(),
+        15 => {
+            let (tx, rx) = mpsc::channel();
+            thread::spawn(move || {
+                let val = String::from("hi");
+                tx.send(val).unwrap();
+            });
+            let received = rx.recv().unwrap();
+            println!("Got: {}", received);
+        },
+        16 => {
+            let m = Mutex::new(5);
+            {
+                let mut num = m.lock().unwrap();
+                *num = 6;
+            }
+            println!("m = {:?}", m);
+        },
         _ => println!("You entered wrong input")
     }
 }

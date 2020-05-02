@@ -109,4 +109,39 @@
 * concurrency issues - Race, Deadlocks, bugs
 * implementation of threads 1:1 (OS API), M:N (green threads)
 * thread::spawn to start a new thread & handle.join().unwrap() to wait till its executed completely
-* 
+* move || is used to take ownership of vars it uses insidew thread
+* a channel is provided by rust to communicate between threads (mpsc)
+* recv() vs try_recv()
+* let tx1 = mpsc::Sender::clone(&tx); // multiple senders one reciever
+* mutex can be used to share state concurrency (acquire a lock before using and unlock when used) Mutex<T>
+* Rc<T> cant be used for concurrency (only used for sinlge threaded programs)
+* Arc<T> can be used in concurrency
+  * let counter = Arc::new(Mutex::new(0));
+  * let counter = Arc::clone(&counter);
+* use Box<T> to check if components implement methods
+    * pub struct Screen {    pub components: Vec<Box<dyn Draw>>,}
+* dynamic dipatch
+* check on trait objects
+* patterns & matching
+    * compiler does not check if exhaustiveness, match does it
+    * enumerate() is used to create index for loop
+    * patterns come in two forms refutable & irrefutable
+    * arms should use refutable patterns
+    * use "|" or for multiple comparisons
+    * 1 ... 5  //range arms (only numeric and char values)
+    *  let p = Point { x: 0, y: 7 };  let Point { x, y } = p; // struct destucturing
+    * enum & struct destructuring for matching arms
+    * _ can be used to ignore a parameter
+    * Point { x, .. } => println!("x is {}", x) // ignoring remaining part of value
+    * raw pointers
+        * let r1 = &num as *const i32;let r2 = &mut num as *mut i32;
+    * unsafe rust
+        * deferencing
+        * function calling
+        * FFI
+        * trait
+    * static vars - have references only & can be mutable
+    * Advanced Traits
+    * Advanced types
+        * ! // never return type
+        * 
