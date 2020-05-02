@@ -106,4 +106,7 @@
 * Box<T> it allows to store data in heap rather in stack Box::new(5)
 * in recursive type the memory cant be know at compile time
 * cons list (two arguments always)
+* concurrency issues - Race, Deadlocks, bugs
+* implementation of threads 1:1 (OS API), M:N (green threads)
+* thread::spawn to start a new thread & handle.join().unwrap() to wait till its executed completely
 * 

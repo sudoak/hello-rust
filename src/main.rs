@@ -14,6 +14,7 @@ mod guess_number_struct;
 mod greatest_of_all;
 mod trait_sample;
 mod cons_list_example;
+mod thread_example;
 
 // use imports 
 use guess_number::guess_number;
@@ -27,6 +28,7 @@ use guess_number_struct::{ Guess};
 use greatest_of_all::largest;
 use trait_sample::run;
 use cons_list_example::print_list;
+use thread_example::thread_main;
 
 // structs & enums
 #[derive(Debug)]
@@ -111,6 +113,7 @@ fn main() {
         13 => {
             print_list();
         },
+        14 => thread_main(),
         _ => println!("You entered wrong input")
     }
 }
